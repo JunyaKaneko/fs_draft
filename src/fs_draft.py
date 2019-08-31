@@ -52,9 +52,6 @@ if __name__ == '__main__':
             datagen.fit(X_query_train)
             for X_batch, y_batch in datagen.flow(X_query_train, y_query_train, batch_size=batch_size):
                 with tf.GradientTape() as t:
-
-                    # if W is None:
-                    #     print('Train W')
                     Z = features(X_example)
                     ZT = tf.transpose(Z)
                     try:
