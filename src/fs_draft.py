@@ -19,7 +19,6 @@ if __name__ == '__main__':
 
     features = keras.models.Sequential([
         ResNet50(include_top=False, input_shape=(150, 150, 3), classes=10),
-        # VGG16(include_top=False, input_shape=(150, 150, 3), classes=10),
         keras.layers.Flatten()
     ])
 
